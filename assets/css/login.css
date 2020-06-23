@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+body{
+    background: url("../images/login_bg.jpg") no-repeat;
+    background-size: cover;
+    position: relative;
+}
+/* logo */
+#logo{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+/* 登录和注册区域 */
+#login, #register{
+    width: 400px;
+    height: 310px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    padding: 0 30px;
+}
+/* 默认注册盒子隐藏 */
+#register{
+    display: none;
+}
+/*  */
+/* 登录标题 */
+.login-title{
+    display: block;
+    margin: 15px auto;
+}
+/* .layui-form-item{
+    margin: 0 30px;
+} */
+.goto-register, .goto-login{
+    display: flex;
+    justify-content: flex-end;
+}
+.layui-form-item{
+    position: relative;
+}
+/* 表单图标 */
+.layui-icon{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+}
+.layui-input{
+    padding-left: 30px;
+}
