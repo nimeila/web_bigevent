@@ -14,7 +14,8 @@ $(function() {
 
     // ------------------正则---------------------
     // layui里获取form对象
-    var form = layui.form;
+
+    var form = layui.form
     var layer = layui.layer;
 
     // 设置正则 
@@ -52,5 +53,30 @@ $(function() {
         })
 
     })
+
+
+    // -----------------登录-------------------------
+    // 监听表单
+    $('#login_box').on('submit', function(e) {
+        // 阻止默认行为
+        e.preventDefault();
+        // 发起ajax请求
+        $.ajax({
+            method: 'POST',
+            url: '/api/login',
+            data: $(this).serialize(),
+            success: function(res) {
+                if (res.status !== 0) {
+                    return layer.msg('登录失败！')
+
+                }
+                layer.msg('登录成功！')
+                localStorage.setItem('token', res.token)
+                location.href = '/index.html'
+
+            }
+        })
+    })
+
 
 });
