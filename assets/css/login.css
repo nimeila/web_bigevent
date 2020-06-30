@@ -39,7 +39,7 @@ body {
 }
 
 .layui-form {
-    padding: 0 30px;
+    padding: 0 20px;
 }
 
 .links {
@@ -54,11 +54,11 @@ body {
 .layui-icon {
     position: absolute;
     top: 10px;
-    left: 10px;
+    left: -10px;
 }
 
 .layui-form .layui-input {
-    padding-left: 32px;
+    padding-left: 30px;
 }
 
 .loginAndRegBox .reg-box {
